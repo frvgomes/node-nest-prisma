@@ -28,7 +28,7 @@ export abstract class InMemoryRepository<E extends Entity>
   async delete(id: string): Promise<void> {
     await this._get(id); // Só pra garantir que a entidade existe.
     const index = await this._index(id);
-    this.items.slice(index, 1);
+    this.items.splice(index, 1);
   }
 
   protected async _get(id: string): Promise<E> {
