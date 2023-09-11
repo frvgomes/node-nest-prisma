@@ -13,17 +13,42 @@ export type SearchProps<Filter = string> = {
 
 export class SearchParams {
   protected _page: number;
-  protected perPage = 15;
-  protected sort: string | null;
-  protected sortDir: SortDirection | null;
-  protected filter: string | null;
+  protected _perPage = 15;
+  protected _sort: string | null;
+  protected _sortDir: SortDirection | null;
+  protected _filter: string | null;
   constructor(props: SearchProps) {
     this._page = props.page;
-    this.perPage = props.perPage;
-    this.sort = props.sort;
-    this.sortDir = props.sortDir;
-    this.filter = props.filter;
+    this._perPage = props.perPage;
+    this._sort = props.sort;
+    this._sortDir = props.sortDir;
+    this._filter = props.filter;
   }
+
+  get page() {
+    return this._page;
+  }
+  private set page(value: number) {}
+
+  get perPage() {
+    return this._perPage;
+  }
+  private set perPage(value: number) {}
+
+  get sort() {
+    return this._sort;
+  }
+  private set sort(value: string | null) {}
+
+  get sortDir() {
+    return this._sortDir;
+  }
+  private set sortDir(value: string | null) {}
+
+  get filter() {
+    return this._filter;
+  }
+  private set filter(value: string | null) {}
 }
 
 export interface SearchableRepositoryInterface<
