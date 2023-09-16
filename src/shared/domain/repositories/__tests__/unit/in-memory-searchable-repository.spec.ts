@@ -91,8 +91,6 @@ describe('InMemoryRepository unit tests', () => {
       expect(itemsSorted).toStrictEqual([items[1], items[0], items[2]]);
 
       itemsSorted = await sut['applySort'](items, 'name', 'desc');
-      console.log(items);
-      console.log(itemsSorted);
       expect(itemsSorted).toStrictEqual([items[2], items[0], items[1]]);
     });
   });

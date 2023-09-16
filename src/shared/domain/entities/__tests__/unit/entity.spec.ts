@@ -32,7 +32,7 @@ describe('Entity unit tests', () => {
     const id = '204a21dd-69cf-4a3c-bf97-96d84402bd69';
     const entity = new StubEntity(props, id);
 
-    expect(entity.toJASON()).toStrictEqual({
+    expect(entity.toJSON()).toStrictEqual({
       id,
       ...props,
     });
