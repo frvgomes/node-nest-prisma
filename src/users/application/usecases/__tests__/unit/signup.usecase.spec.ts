@@ -33,7 +33,7 @@ describe('UserInMemoryRepository unit tests', () => {
     const props = UserDataBuilder({ email: 'a@a.com' });
     await sut.execute(props);
     await sut.execute(props);
-    //essa porra tá bichada
+    //essa porra tá bichada - aula 80
     await expect(props.email).toBe('a@a.com');
   });
 });
