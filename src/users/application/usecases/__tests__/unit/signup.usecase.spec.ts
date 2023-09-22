@@ -3,9 +3,8 @@ import { SignupUseCase } from '../../signup.usecase';
 import { HashProvider } from '@/shared/application/providers/hash-provider';
 import { BcryptjsHashProvider } from '@/users/infrastructure/dto/providers/hash-provider/bcryptjs-hash-provider';
 import { UserDataBuilder } from '@/users/domain/testing/helpers/user-data-builder';
-import { ConflictError } from '@/shared/domain/errors/conflict-error';
 
-describe('UserInMemoryRepository unit tests', () => {
+describe('SignupUseCase unit tests', () => {
   let sut: SignupUseCase.UseCase;
   let repository: UserInMemoryRepository;
   let hashProvider: HashProvider;
